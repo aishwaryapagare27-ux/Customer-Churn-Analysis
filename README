@@ -1,0 +1,210 @@
+# Churn Analysis & Customer Intelligence
+
+An end-to-end customer churn analysis project using **Python, SQL, SQLite, Pandas, NumPy, Matplotlib, and Seaborn** to identify churn patterns, customer risk factors, revenue impact, and actionable business insights.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Data analysis and feature engineering |
+| Pandas | Data cleaning and manipulation |
+| NumPy | Numerical computations |
+| SQLite | Database storage and SQL analysis |
+| SQL | Customer and subscription analysis |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Jupyter Notebook | Analysis and documentation |
+
+## 🗄️ Database Tables
+
+### Customer
+- customer_id
+- name
+- gender
+- date_of_birth
+- state
+- city
+
+### Subscription
+- subscription_id
+- customer_id
+- plan_type
+- start_date
+- cancellation_date
+- monthly_charges
+- contract_type
+
+### Support
+- support_id
+- customer_id
+- complaint_date
+- complaint_type
+- escalation_flag
+- resolution_time
+
+## 🔄 Project Workflow
+
+### 1. Data Import
+- Imported customer, subscription, and support data.
+- Stored structured data in SQLite tables.
+- Connected Python with SQLite for analysis.
+
+### 2. Data Cleaning
+- Checked missing values and duplicates.
+- Converted date columns into appropriate datetime formats.
+- Standardized categorical values.
+- Validated customer and subscription records.
+
+### 3. Feature Engineering
+Created analytical features such as:
+- `churn_flag`
+- `tenure_days`
+- Encoded categorical variables
+- Customer-level support and complaint metrics
+
+**Churn flag definition:**
+```text
+Customer is considered churned when cancellation_date is available.
+```
+
+### 4. Exploratory Data Analysis
+Analyzed:
+- Overall churn and retention
+- Churn by subscription plan
+- Churn by contract type
+- Churn by state
+- Customer tenure
+- Revenue and ARPU
+- Customer support and complaint patterns
+- High-risk customer segments
+
+### 5. Data Visualization
+Created charts using **Matplotlib** and **Seaborn** to identify customer behavior patterns and communicate business insights.
+
+## 📊 Key KPIs
+
+| KPI | Result |
+|---|---:|
+| Churn Rate | **28.6%** |
+| Retention Rate | **71.4%** |
+| Average Tenure | **~1,451 days** |
+| ARPU | **~₹18.8** |
+| Total Revenue | **~₹395** |
+| Revenue Loss Due to Churn | **~₹74** |
+| Revenue Loss Percentage | **~18%** |
+| CLTV Lost | **~2,047** |
+| Monthly-Contract Churn | **55.6%** |
+| Annual-Contract Churn | **8.3%** |
+
+## 🔎 Key Findings
+
+- The overall customer churn rate is **28.6%**, while **71.4%** of customers are retained.
+- Average customer tenure is approximately **1,451 days**.
+- Customers on **monthly contracts have significantly higher churn (55.6%)** compared with annual contracts (**8.3%**).
+- The **Basic plan contributes a large share of churn**, although its direct revenue impact is comparatively lower.
+- A notable concentration of churn was observed in **September 2024**.
+- **Karnataka** shows comparatively high churn and should be investigated further.
+- Medium- and high-risk customers represent an important segment for proactive retention.
+- Support escalations and complaint frequency can act as useful signals for identifying customers at higher churn risk.
+- Churn results in approximately **18% revenue loss**, highlighting the financial importance of customer retention.
+
+## 💡 Business Recommendations
+
+1. **Investigate high-churn regions** — Analyze customer experience, pricing, service quality, and competitive factors in regions with elevated churn.
+2. **Encourage contract migration** — Provide incentives and suitable offers to move monthly-contract customers toward annual contracts.
+3. **Prioritize high-risk customers** — Build targeted retention campaigns for medium- and high-risk customers before cancellation occurs.
+4. **Monitor pricing and product changes** — Evaluate whether changes in pricing, plans, or product features are contributing to increased churn.
+5. **Improve customer support** — Track escalations, complaints, and resolution times to identify service issues that may influence customer retention.
+
+## 📈 Business Impact
+
+This analysis helps businesses:
+- Identify customers most likely to churn
+- Understand major churn drivers
+- Reduce potential revenue loss
+- Improve customer retention strategies
+- Prioritize high-value and high-risk customers
+- Support data-driven pricing and contract decisions
+- Improve customer support operations
+
+## 🚀 Skills Demonstrated
+
+- Python for data analysis
+- Pandas and NumPy
+- SQL and SQLite
+- Data cleaning and validation
+- Feature engineering
+- Exploratory Data Analysis (EDA)
+- Customer churn analysis
+- KPI development
+- Data visualization
+- Business insight generation
+- Customer segmentation
+- Revenue impact analysis
+
+## 📁 Main Files
+
+```text
+churn_analysis/
+│
+├── notebook/
+│   └── churn_analysis.ipynb
+│
+├── data/
+│   └── Customer and subscription datasets
+│
+├── database/
+│   └── SQLite database
+│
+└── Churn_Analysis_Report.pdf
+```
+
+## ▶️ How to Run the Project
+
+### 1. Clone the repository
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Open the project folder
+```bash
+cd churn_analysis
+```
+
+### 3. Install required libraries
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### 4. Start Jupyter Notebook
+```bash
+jupyter notebook
+```
+
+### 5. Open and run
+```text
+notebook/churn_analysis.ipynb
+```
+
+Run the notebook cells sequentially to reproduce the analysis.
+
+## 📌 Future Improvements
+
+- Build an interactive **Power BI dashboard**
+- Develop a machine learning churn prediction model
+- Add customer lifetime value prediction
+- Create automated churn-risk scoring
+- Build a real-time customer retention monitoring system
+- Add more detailed cohort and retention analysis
+
+## 👩‍💻 Author
+
+**Kaveri Patil**
+
+📧 Email: **patilkaveri6353@gamil.com**
+
+🔗 LinkedIn: [Kaveri Patil](https://www.linkedin.com/in/kaveri-patil-064397351/)
+
+## ⭐ Project Purpose
+
+The purpose of this project is to demonstrate an end-to-end **Data Analytics workflow** by transforming customer, subscription, and support data into meaningful insights that can help businesses understand churn, reduce revenue loss, and improve customer retention.
